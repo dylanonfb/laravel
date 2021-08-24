@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Models\Service;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,4 +20,27 @@ Route::get('/', function () {
 
 Route::get('/landing', function () {
     return view('landing');
+});
+
+Route::get('/landing/{slug}', function ($slug) {
+    return view('landing',[
+'post' => $slug
+]);
+});
+
+Route::get('/services', function () {
+    $services=Service::all();
+     return view('services',[
+         'services' => $services
+    ]);
+});
+
+Route::get('/about-us', function () {
+    $services=Service::all();
+     return view('about');
+});
+
+Route::get('/contact-us', function () {
+    $services=Service::all();
+     return view('contact');
 });
