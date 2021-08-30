@@ -51,8 +51,8 @@ Route::get('/search', function () {
         ]);
 });
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
-    return view('dashboard');
-})->name('dashboard');
+    return view('landing');
+})->name('landing');
 
 
 Route::get('/', function () {
