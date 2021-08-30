@@ -19,7 +19,7 @@
     <div class="container">
         @include('includes.header')
         
-        {{$slot}}
+        @yield('content')
 
     </div>
     @include('includes.footer')

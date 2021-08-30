@@ -14,9 +14,9 @@ use App\Models\Service;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
 // Route::get('/landing', function () {
 //     return view('landing');
@@ -55,6 +55,6 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 })->name('dashboard');
 
 
-Route::middleware(['auth:sanctum', 'verified'])->get('/landing', function () {
+Route::middleware(['auth:sanctum', 'verified'])->get('/', function () {
      return view('landing');
  });
