@@ -1,7 +1,3 @@
-@extends('layouts.default')
-
-@section('content')
-
+<x-app-layout>
 <x-main>{{ $post = isset($post) ? $post:null}}</x-main>
-
-@endsection
+</x-app-layout>

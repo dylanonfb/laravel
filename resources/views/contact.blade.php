@@ -3,6 +3,7 @@
 @section('content')
 
 <div class="container">
+    <h2 class="text-muted text-center">Please drop your queries and we will reach out to you.</h2>
     <!-- Wrapper container -->
 <div class="py-4 w-50 mx-auto">
 

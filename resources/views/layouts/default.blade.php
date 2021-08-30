@@ -18,7 +18,8 @@
 <body>
     <div class="container">
         @include('includes.header')
-        @yield('content')
+        
+        {{$slot}}
 
     </div>
     @include('includes.footer')

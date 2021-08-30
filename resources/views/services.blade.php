@@ -4,8 +4,12 @@
 
 <div class="container">
     <div>
-        <h2 class="text-muted">Please select from the wide range of our services</h2>
+        <h2 class="text-muted text-center">Please select from the wide range of our services</h2>
         <div class="row">
+
+            @if($services->isEmpty())
+            <p class="text-muted text-center">Oops!! No services found. Please check back later.</p>
+            @else
             @foreach($services as $service)
 
             <div class="col-xs-6 col-md-4">
@@ -21,6 +25,7 @@
                 <!--end service card-->
             </div>
             @endforeach
+            @endif
         </div>
     </div>
 </div>

@@ -18,9 +18,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/landing', function () {
-    return view('landing');
-});
+// Route::get('/landing', function () {
+//     return view('landing');
+// });
 
 Route::get('/landing/{slug}', function ($slug) {
     return view('landing',[
@@ -44,3 +44,17 @@ Route::get('/contact-us', function () {
     $services=Service::all();
      return view('contact');
 });
+Route::get('/search', function () {
+    $services=Service::where('service_name','LIKE','%'.$_GET['query'].'%')->get();
+     return view('services',[
+         'services'=>$services
+        ]);
+});
+Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
+    return view('dashboard');
+})->name('dashboard');
+
+
+Route::middleware(['auth:sanctum', 'verified'])->get('/landing', function () {
+     return view('landing');
+ });

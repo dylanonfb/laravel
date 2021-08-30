@@ -12,8 +12,8 @@
           <li><a href="/contact-us" class="nav-link px-2 link-dark">Contact</a></li>
         </ul>
 
-        <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
-          <input type="search" class="form-control" placeholder="Search..." aria-label="Search">
+        <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" action="/search">
+          <input type="search" class="form-control" name="query" placeholder="Search..." aria-label="Search">
         </form>
 
         <div class="dropdown text-end">
