@@ -6,7 +6,7 @@
         </a>
 
         <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-          <li><a href="/landing" class="nav-link px-2 link-secondary">Home</a></li>
+          <li><a href="/" class="nav-link px-2 link-secondary">Home</a></li>
           <li><a href="/services" class="nav-link px-2 link-dark">Services</a></li>
           <li><a href="/about-us" class="nav-link px-2 link-dark">About Us</a></li>
           <li><a href="/contact-us" class="nav-link px-2 link-dark">Contact</a></li>
