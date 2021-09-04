@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\BookingController;
 use Illuminate\Support\Facades\Route;
 use App\Models\Service;
 
@@ -53,6 +54,12 @@ Route::get('/search', function () {
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('landing');
 })->name('landing');
+
+Route::get('/bookings', [BookingController::class,'show'])->middleware(['auth:sanctum', 'verified']);
+
+Route::get('/booknow', [BookingController::class,'form'])->middleware(['auth:sanctum', 'verified']);
+
+Route::post('/bookconfirm', [BookingController::class,'store'])->middleware(['auth:sanctum', 'verified']);
 
 
 Route::get('/', function () {

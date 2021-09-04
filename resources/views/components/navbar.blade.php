@@ -18,13 +18,13 @@
         @if(Auth::check())
         <div class="dropdown text-end">
           <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
-            <img src="/images/users/1.jpg" alt="mdo" width="32" height="32" class="rounded-circle">
+            <img src="/images/users/1.jpg" alt="mdo" width="32" height="32" class="rounded-circle" style="display:inline">
           </a>
           
           <ul class="dropdown-menu text-small" aria-labelledby="dropdownUser1">
-            <li><a class="dropdown-item" href="#" aria-disabled="true">New project...</a></li>
-            <li><a class="dropdown-item" href="#">Settings</a></li>
+            <li><a class="dropdown-item" href="#" aria-disabled="true">{{Auth::user()->name}}</a></li>
             <li><a class="dropdown-item" href="#">Profile</a></li>
+            <li><a class="dropdown-item" href="/bookings">My Bookings</a></li>
             <li><hr class="dropdown-divider"></li>
                <!-- Authentication -->
                <form method="POST" action="{{ route('logout') }}">
