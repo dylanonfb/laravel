@@ -72,11 +72,12 @@
         Are you sure you want to cancel the booking?
       </div>
       <div class="modal-footer">
-      <form action="/bookings/cancel" method="POST" ">
+      <form action="/bookings/cancel" method="POST" >
          @csrf
          <input type="hidden" name="booking_id" id="cancel_id"/>
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
         <button type="submit" class="btn btn-primary">Confirm</button>
+      </form>
       </div>
     </div>
   </div>

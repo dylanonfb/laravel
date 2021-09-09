@@ -12,7 +12,7 @@
                     <input type="hidden" name="sid" value="{{$_GET['sid']}}">
                     <span class="input-group-text" id="basic-addon1">{{$_GET['service']}}</span>
                     <span class="input-group-text" id="basic-addon1">Schedule Date</span>
-                    <input type="text" id="datepicker" class="date form-control" placeholder="Date" aria-label="Schedule Date" name="date" aria-describedby="basic-addon1" required>
+                    <input type="text" id="datepicker" class="date form-control" placeholder="Date" aria-label="Schedule Date" name="date" aria-describedby="basic-addon1" autocomplete="off" required>
 
                 </div>
                 <button class="btn btn-primary" onclick="submit">Confirm Booking</button>
