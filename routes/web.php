@@ -56,6 +56,7 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 })->name('landing');
 
 Route::get('/bookings', [BookingController::class,'show'])->middleware(['auth:sanctum', 'verified']);
+Route::post('/bookings/cancel', [BookingController::class,'cancel'])->middleware(['auth:sanctum', 'verified']);
 
 Route::get('/booknow', [BookingController::class,'form'])->middleware(['auth:sanctum', 'verified']);
 
@@ -65,3 +66,7 @@ Route::post('/bookconfirm', [BookingController::class,'store'])->middleware(['au
 Route::get('/', function () {
      return view('landing');
  });
+
+ Route::middleware(['auth:sanctum', 'verified'])->get('/profile', function () {
+    return view('profile');
+})->name('landing');
