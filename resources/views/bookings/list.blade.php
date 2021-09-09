@@ -20,7 +20,7 @@
 
             @endif
     <div>
-        <h2 class="text-muted text-center">My Bookings 123</h2>
+        <h2 class="text-muted text-center">My Bookings</h2>
         <div class="row">
 
             @if($bookings->isEmpty())
