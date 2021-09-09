@@ -65,8 +65,8 @@ Route::post('/bookconfirm', [BookingController::class,'store'])->middleware(['au
 
 Route::get('/', function () {
      return view('landing');
- });
+ })->name('home');
 
  Route::middleware(['auth:sanctum', 'verified'])->get('/profile', function () {
-    return view('profile');
-})->name('landing');
+    return view('dashboard');
+})->name('dashboard');

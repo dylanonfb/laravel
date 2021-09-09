@@ -19,6 +19,7 @@
 
 
     <link href="{{asset('css/app.css')}}" rel="stylesheet">
+    @livewireStyles
     <title>{{env('APP_NAME')}}</title>
 </head>
 
@@ -30,6 +31,9 @@
 
     </div>
     @include('includes.footer')
+    @stack('modals')
+
+@livewireScripts
 </body>
 
 </html>
